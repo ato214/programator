@@ -1,0 +1,19 @@
+{
+  "author": "Grzegorz.Szymczykiewicz",
+  "dependencies": {},
+  "description": "programator",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "eslint": "^6.7.2"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "grzegorzjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "version": "1.0.0"
+}
