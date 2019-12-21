@@ -19,4 +19,5 @@ function createCar() {
     let car1 = new Car("Ford", "Mondeo", 30000, 2019, "AWD");
     car1.displayCarFullInfo();
     car1.drive();
+    // hgdv,jhsd
 }
