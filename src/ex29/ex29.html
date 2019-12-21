@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+<h1> Kurs Java Script></h1>
+
+<h2> PROMPT - Prezentacja></h2>
+
+<button onclick = "myFunction()">Wypróbuj</button>
+
+<p id = "demo"></p>
+
+<script>
+    function myFunction() {
+        var txt;
+        var person = prompt  ("Wprowadź swoje imię", "Jan Kowalski");
+        if (person == null || person == "") {
+            txt = "Anulowano przez użytkownika.";
+        } else {
+            txt = "Witaj " + person + "!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+
+</script>
+
+</body>
+
+</html>
