@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="ex30.js" type="text/javascript"></script>-->
+</head>
+
+<!--<body>-->
+<!--<p> Zegar wystartował></p>-->
+<!--<p id = "demo"></p>-->
+<!--<button onclick="clearInterval(myVar)">Zatrzymaj</button>-->
+<!--<button onclick="myVar = setInterval(myTimer, 1000)">Start</button>-->
+
+<body onload="initRealTime()">
+<p> Zegar wystartował></p>
+
+<input type="button" value="Stop" onclick="clearInterval(tmr)">
+<button onclick="tmr = setInterval(myFunc, 1000)">Start</button>
+<button onclick="tmr = initRealTime(); tmr = setInterval(myFunc, 1000)">Start real time</button>
+
+<p id = "demo"></p>
+
+<script>
+    var tmr = setInterval(myFunc, 1000);
+    var d;
+
+    function myFunc() {
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        d = new Date(d.getTime() + 1000);
+    }
+
+    function initRealTime() {
+        d = new Date();
+    }
+
+</script>
+
+</body>
+
+</html>

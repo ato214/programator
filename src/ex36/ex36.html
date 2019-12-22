@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"
+     style="background-color: #86d350; width: 100px; height:20px; padding:30px;">Najedź myszką</div>
+
+<script>
+    function mouseOver(obj) {
+        obj.innerHTML = "Myszka nad elementem"
+    }
+
+    function mouseOut(obj) {
+        obj.innerHTML = "Najedź myszką"
+
+    }
+</script>
+</body>
+
+</html>
