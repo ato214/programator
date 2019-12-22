@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<input type="text" id="nameInput" onchange="change()">
+
+<p id="demo"></p>
+
+<script>
+    var counter = 0;
+
+    function change() {
+        document.getElementById("nameInput").value =
+            document.getElementById("nameInput").value.toUpperCase();
+
+        document.getElementById("demo").innerHTML =
+            document.getElementById("nameInput").value.toUpperCase();
+
+
+        if (counter % 2 == 0) {
+            document.getElementById("demo").style.color = "blue";
+        } else {
+            document.getElementById("demo").style.color = "red";
+        }
+        counter++;
+    }
+
+</script>
+
+
+
+</body>
+
+</html>
