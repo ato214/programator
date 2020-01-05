@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+
+<body onload="firstList()">
+    <h1> This is your fruit list:</h1>
+    <div id='question'><br>Do you want to change something?<br><br></div>
+    <button id="myBtn">Change 1 fruit</button>
+
+    <script type="text/javascript">
+        var myFruits = ["banana", "apple", "kiwi", "pear", "orange"];
+        var x = document.getElementById("myBtn");
+        x.addEventListener("click", changeFruit);
+
+        function firstList() {
+            // stworzyłem nowy element div dla każdego
+            // i daje do jego zawartości element z tablicy 
+            for (let i = 0; i < myFruits.length; i++) {
+                var newDiv = document.createElement("div");
+                newDiv.innerHTML = `<div>Fruit no. ${i+1}: ${myFruits[i]} <br></div>`;
+
+                // następnie dodaję utworzony div do DOM
+                var my_div = document.getElementById("question");
+                document.body.insertBefore(newDiv, my_div);
+            }
+        }
+
+        function changeFruit() {
+            var txt;
+            var fruit = prompt("Change 1 fruit", "");
+            if (fruit == null || fruit == "") {
+                txt = "Fruit no. 1: User canceled";
+            } else {
+                txt = "Fruit no. 1: " + fruit;
+            }
+            document.querySelector("div").innerHTML = txt;
+
+        }
+    </script>
+</body>
+
+</html>
